@@ -9,7 +9,7 @@ var CounterForm = require('CounterForm');
 			<div>
 				<h1 className="text-center page-title">Timer </h1>
 				<Counter  totalSecondes={65}/>
-				<CounterForm />
+				
 			</div>
 		)
 	}

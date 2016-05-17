@@ -5,15 +5,33 @@ var CounterForm = require('CounterForm');
 
 
 var CountDown = React.createClass({
-	render: function() {
+	getInitialState: function() {
+		return{
+			count:120
+		};
+	},
+     
+	handleSetCountdown: function (seconds) {
+		debugger;
+		this.setState({
+			count:seconds
+		});
+
+	},
+
+	render: function () {
+		var {count} = this.state;	
+
+		debugger;
 		return(
 			<div>
-				<h1 className="text-center page-title">CountDown </h1>
-				<Counter />
-				<CounterForm />
-				<CounterInput />
+			<h1 className="text-center page-title">CountDown </h1>
+			<Counter totalSeconds={count}/>
+			debugger;
+			<CounterForm onSetCountdown = {this.handleSetCountdown}/>
+			<CounterInput />
 			</div>
-		)
+			)
 	}
 });
 
