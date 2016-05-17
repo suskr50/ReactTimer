@@ -14,7 +14,7 @@ describe('Counter', () => {
  
   describe('render', () => {
     it('should render clock to output', () => {
-      var counter = TestUtils.renderIntoDocument(<Counter totalSeconds={62}/>);
+      var counter = TestUtils.renderIntoDocument(<Counter totalSeconds= {62}/>);
       var $el = $(ReactDOM.findDOMNode(counter));
       var actualText = $el.find('.counter-text').text();
 

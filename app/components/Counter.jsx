@@ -1,11 +1,8 @@
 var React = require('react');
 
 var Counter = React.createClass({
-  getDefaultProps: function () {
-    return {
-     totalSeconds: '0'
-    };
-   
+ getDefaultProps: function () {
+    totalSeconds: 0
   },
   propTypes: {
     totalSeconds: React.PropTypes.number
