@@ -16,22 +16,22 @@ describe('CounterForm',()=> {
 
 		var countdownForm = TestUtils.renderIntoDocument(<CounterForm onSetCountdown = {spy}/>);
 
-		  var $el = $(ReactDOM.findDOMNode(countdownForm));
+		var $el = $(ReactDOM.findDOMNode(countdownForm));
 
-		  countdownForm.refs.seconds.value = '109';
-		  TestUtils.Simulate.submit($el.find('form')[0]);
-		  expect(spy).toHaveBeenCalledWith(109);
+		countdownForm.refs.seconds.value = '109';
+		TestUtils.Simulate.submit($el.find('form')[0]);
+		expect(spy).toHaveBeenCalledWith(109);
 	});
-		it('should NOT call onSetCountdown if valid seconds entered', ()=> {
+	it('should NOT call onSetCountdown if valid seconds entered', ()=> {
 		var spy = expect.createSpy();
 
 		var countdownForm = TestUtils.renderIntoDocument(<CounterForm onSetCountdown = {spy}/>);
 
-		  var $el = $(ReactDOM.findDOMNode(countdownForm));
+		var $el = $(ReactDOM.findDOMNode(countdownForm));
 
-		  countdownForm.refs.seconds.value = 'aabc';
-		  TestUtils.Simulate.submit($el.find('form')[0]);
-		  expect(spy).toNotHaveBeenCalled();
+		countdownForm.refs.seconds.value = 'aabc';
+		TestUtils.Simulate.submit($el.find('form')[0]);
+		expect(spy).toNotHaveBeenCalled();
 	});
 });
 

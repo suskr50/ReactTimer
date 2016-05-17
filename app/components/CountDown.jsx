@@ -13,12 +13,14 @@ var CountDown = React.createClass({
 	},
      
     componentDidUpdate: function (prevProps, prevState){
-    	if (this.state.coundownStatus !== prevState.countdownStatus {
-    		switch (this.state.coundownStatus) {
+    	if (this.state.coundownStatus !== prevState.countdownStatus) {
+    	
+    		switch (this.state.countdownStatus) {
     			case 'started': 
     				this.startTimer();
     				break;
-    		}
+    		};
+
     	}
 
     }, 
@@ -26,14 +28,14 @@ var CountDown = React.createClass({
     	this.timer = setInterval(() => {
     		var newCount = this.state.count - 1;
     		this.setState({
-    			count: newCount >= 0 ? newcount: 0
+    			count: newCount >= 0 ? newCount: 0
 
     		});
-    		
+
     	},1000);
     },
 	handleSetCountdown: function (seconds) {
-		debugger;
+		
 		this.setState({
 			count:seconds,
 			countdownStatus: 'started'
@@ -43,7 +45,7 @@ var CountDown = React.createClass({
 	render: function () {
 		var {count} = this.state;	
 
-		debugger;
+	
 		return(
 			<div>
 			<h1 className="text-center page-title">CountDown </h1>
