@@ -1,14 +1,11 @@
 var React = require('react');
 
-var CounterInput = React.createClass({
-
-	propType: {
+var CountButtons = React.createClass({
+	propTypes: {
 		countdownStatus: React.PropTypes.string.isRequired,
 	},
-
-	render: function() {
+	render: function () {
 		var {countdownStatus} = this.props;
-
 		var renderStartStopButton = () => {
 			if (countdownStatus === "started") {
 				return <button className="button secondary">Pause</button>
@@ -20,7 +17,7 @@ var CounterInput = React.createClass({
 
 		return (
 			<div className="controls">
-				{renderStartsStopsButton()}
+				{renderStartStopButton()}
 				<button className="button alert hollow">Clear</button>
 			</div>
 			)
@@ -29,4 +26,4 @@ var CounterInput = React.createClass({
 });
 
 
-module.exports = CounterInput;
+module.exports = CountButtons;

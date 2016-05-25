@@ -28,6 +28,7 @@ module.exports = {
       Counter: 'app/components/Counter.jsx',
       CounterForm: 'app/components/CounterForm.jsx',
       CounterInput: 'app/components/CounterInput.jsx',
+      CountButtons: 'app/components/CountButtons.jsx',
       Timer: 'app/components/Timer.jsx',
       applicationStyles:'app/styles/app.scss'
     },
