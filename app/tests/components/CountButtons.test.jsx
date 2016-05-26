@@ -6,7 +6,7 @@ var TestUtils = require('react-addons-test-utils');
 
 var Controls = require('CountButtons');
 
-describe('11Controls',() => {
+describe('Control Buttons',() => {
 	it('should exist',() => {
 
 		expect('Controls').toExist()

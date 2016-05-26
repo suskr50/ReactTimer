@@ -1,3 +1,4 @@
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 var expect = require('expect');
@@ -6,17 +7,17 @@ var TestUtils = require('react-addons-test-utils');
 
 var Counter = require('Counter');
 
-describe('Counter', () => {
+describe('The Counter', () => {
   it('should exist', () => {
     expect(Counter).toExist();
   });
 
  
   describe('render', () => {
-    it('should render clock to output', () => {
+    it('should render clock to output 1:02', () => {
       var counter = TestUtils.renderIntoDocument(<Counter totalSeconds= {62}/>);
       var $el = $(ReactDOM.findDOMNode(counter));
-      var actualText = $el.find('.counter-text').text();
+      var actualText = $el.find('.clock-text').text();
 
       expect(actualText).toBe('01:02');
     });
